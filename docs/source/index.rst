@@ -102,7 +102,7 @@ Lightllm 整合了众多的开源方案的优点，包括但不限于 FasterTran
    :maxdepth: 1
    :caption: 使用服务
 
-   调用参数说明 <user/api_parameters>
+   接口调用详解 <user/api_parameters>
 
 .. toctree::
    :maxdepth: 1

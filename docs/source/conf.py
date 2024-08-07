@@ -16,6 +16,8 @@ import sys
 from typing import List
 
 from sphinx.ext import autodoc
+import sphinxcontrib.redoc
+
 
 logger = logging.getLogger(__name__)
 sys.path.append(os.path.abspath("../.."))
@@ -40,7 +42,10 @@ extensions = [
     "sphinx.ext.autosummary",
     "myst_parser",
     "sphinxarg.ext",
+    "sphinxcontrib.redoc",
 ]
+
+html_static_path = ["_static"]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]

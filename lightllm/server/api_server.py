@@ -311,7 +311,7 @@ async def shutdown():
     return
 
 
-def main():
+def make_argument_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser()
     parser.add_argument("--host", type=str, default="127.0.0.1")
     parser.add_argument("--port", type=int, default=8000)
@@ -451,6 +451,12 @@ def main():
     parser.add_argument(
         "--enable_monitor_auth", action="store_true", help="Whether to open authentication for push_gateway"
     )
+
+    return parser
+
+
+def main():
+    parser = make_argument_parser()
 
     args = parser.parse_args()
 
