@@ -56,10 +56,11 @@
     $                                       --port 8080                     \
     $                                       --tp 1                          \
     $                                       --max_total_token_num 120000    \
-    $                                       --trust_remote_code
+    $                                       --trust_remote_code             \
+    $                                       --eos_id 151643   
 
 .. note::
-    上面代码中的 ``--model_dir`` 参数需要修改为你本机实际的模型路径
+    上面代码中的 ``--model_dir`` 参数需要修改为你本机实际的模型路径。 ``--eos_id 151643`` 是Qwen模型专属，其它模型请删除这个参数。
 
 
 3. （可选）测试模型服务

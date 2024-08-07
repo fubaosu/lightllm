@@ -70,11 +70,11 @@ lightllm 支持大多数的主流的开源大语言模型以及多模态模型�
   * - 模型
     - 备注
   * - `Qwen-VL <https://huggingface.co/Qwen/Qwen-VL>`_
-    -  
+    -  :code:`--trust_remote_code --enable_multimodal`
   * - `Qwen-VL-Chat <https://huggingface.co/Qwen/Qwen-VL-Chat>`_
-    -  
+    -  :code:`--trust_remote_code --enable_multimodal`
   * - `Llava-7b <https://huggingface.co/liuhaotian/llava-v1.5-7b>`_
-    -  
+    -  :code:`--enable_multimodal`
   * - `Llava-13b <https://huggingface.co/liuhaotian/llava-v1.5-13b>`_
-    -  
+    -  :code:`--enable_multimodal`
 
