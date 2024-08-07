@@ -60,6 +60,8 @@ Lightllm 整合了众多的开源方案的优点，包括但不限于 FasterTran
 - `MiniCPM <https://huggingface.co/openbmb/MiniCPM-2B-sft-bf16>`_
 - `Phi-3 <https://huggingface.co/collections/microsoft/phi-3-6626e15e9585a200d2d761e3>`_
 - `CohereForAI <https://huggingface.co/CohereForAI/c4ai-command-r-plus>`_
+- `DeepSeek-V2-Lite <https://huggingface.co/deepseek-ai/DeepSeek-V2-Lite>`_ 
+- `DeepSeek-V2 <https://huggingface.co/deepseek-ai/DeepSeek-V2>`_ 
 
 
 文档列表
@@ -78,7 +80,6 @@ Lightllm 整合了众多的开源方案的优点，包括但不限于 FasterTran
    :caption: lightllm原理
 
    lightllm介绍 <lightllm_info/lightllm>
-   lightllm实现 <lightllm_info/lightllm_impl>
 
 
 .. toctree::
@@ -87,6 +88,7 @@ Lightllm 整合了众多的开源方案的优点，包括但不限于 FasterTran
 
    支持的模型列表 <models/supported_models>
    启动和测试模型示例 <models/test>
+   添加新模型 <models/add_new_model>
 
 .. toctree::
    :maxdepth: 1
@@ -106,7 +108,7 @@ Lightllm 整合了众多的开源方案的优点，包括但不限于 FasterTran
    :maxdepth: 1
    :caption: 开发者文档
 
-   添加新模型 <dev/add_new_model>
+   lightllm实现 <dev/lightllm_impl>
    TokenAttention <dev/token_attention>
    Efficient Router <dev/router>
    NoPad <dev/no_pad>
