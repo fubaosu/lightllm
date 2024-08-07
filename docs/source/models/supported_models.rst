@@ -5,7 +5,7 @@ lightllm 支持大多数的主流的开源大语言模型以及多模态模型�
 
 .. note::
 
-    由于lightllm 的轻量级设计，lightllm具有非常高的可扩展性，这意味着添加新的模型支持非常简单，具体方法请参考： :ref:`添加新模型 <add_new_model>`
+    由于lightllm 的轻量级设计，lightllm具有非常高的可扩展性，这意味着添加新的模型支持非常简单，具体方法请参考 **添加新模型** 一节`
 
 
 -----
@@ -77,4 +77,17 @@ lightllm 支持大多数的主流的开源大语言模型以及多模态模型�
     -  :code:`--enable_multimodal`
   * - `Llava-13b <https://huggingface.co/liuhaotian/llava-v1.5-13b>`_
     -  :code:`--enable_multimodal`
+
+
+Reward模型
+^^^^^^^^^^^^^^^^^
+
+.. list-table::
+  :widths: 25 25 
+  :header-rows: 1
+
+  * - 模型
+    - 备注
+  * - `internLM-reward <https://huggingface.co/internlm/internlm2-1_8b-reward>`_
+    -  :code:`--use_reward_model`
 
