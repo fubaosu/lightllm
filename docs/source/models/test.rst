@@ -172,3 +172,49 @@ internlm2-1_8b
     $              "frequency_penalty":1
     $            }
     $           }'
+
+
+internlm2-1_8b-reward
+^^^^^^^^^^^^^^^^^^^^^^^
+
+**启动服务**
+
+.. code-block:: console
+
+    $ python -m lightllm.server.api_server --model_dir ~/models/internlm2-1_8b-reward  \
+    $                                       --host 0.0.0.0                       \
+    $                                       --port 8080                          \
+    $                                       --tp 1                               \
+    $                                       --max_total_token_num 120000         \
+    $                                       --use_reward_model                    \
+    $                                       --trust_remote_code               
+
+.. tip::
+
+    ``--use_reward_model`` 表示使用 reward 类模型必须要打开的选项。
+
+
+**测试服务**
+
+.. code-block:: python
+
+    import json
+    import requests
+
+    query = "<|im_start|>user\nHello! What's your name?<|im_end|>\n<|im_start|>assistant\nMy name is InternLM2! A helpful AI assistant. What can I do for you?<|im_end|>\n<|reward|>"
+
+    url = "http://127.0.0.1:8080/get_score"
+    headers = {'Content-Type': 'application/json'}
+
+    data = {
+        "chat": query,
+        "parameters": {
+            "frequency_penalty":1
+        }
+    }
+    response = requests.post(url, headers=headers, data=json.dumps(data))
+
+    if response.status_code == 200:
+        print(f"Result: {response.json()}")
+    else:
+        print(f"Error: {response.status_code}, {response.text}")

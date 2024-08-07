@@ -70,7 +70,7 @@ layer_infer 目录下是进行推理处理的相关基类，并在template目录
      - 负责将网络最后的隐层输出转化为logits的推理
 
 
-上述三个类的基类 BaseLayerInfer 提供了两个最重要的对外服务函数接口，所有的推理行为都会由这两个接口进入。
+上述三个类的基类 BaseLayerInfer 提供了两个最重要的对外服务函数接口，分别表示prefill和decode推理:。
 
 .. code-block:: python
 
