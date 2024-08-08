@@ -43,6 +43,7 @@ extensions = [
     "myst_parser",
     "sphinxarg.ext",
     "sphinxcontrib.redoc",
+    "sphinxcontrib.openapi",
 ]
 
 html_static_path = ["_static"]

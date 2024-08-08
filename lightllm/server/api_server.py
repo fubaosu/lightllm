@@ -104,9 +104,9 @@ def readiness():
     return {"status": "ok"}
 
 
-@app.get("/healthz")
-@app.get("/health")
-@app.head("/health")
+@app.get("/healthz", summary="Check server health")
+@app.get("/health", summary="Check server health")
+@app.head("/health", summary="Check server health")
 async def healthcheck(request: Request):
     first_set_handle_loop()
     if os.environ.get("DEBUG_HEALTHCHECK_RETURN_FAIL") == "true":
@@ -120,7 +120,7 @@ async def healthcheck(request: Request):
         return JSONResponse({"message": "Error"}, status_code=404)
 
 
-@app.get("/token_load")
+@app.get("/token_load", summary="Get the current server's load of tokens")
 async def token_load(request: Request):
     return JSONResponse(
         {
@@ -457,7 +457,6 @@ def make_argument_parser() -> argparse.ArgumentParser:
 
 def main():
     parser = make_argument_parser()
-
     args = parser.parse_args()
 
     global g_generate_func
